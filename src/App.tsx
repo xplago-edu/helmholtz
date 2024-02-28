@@ -19,8 +19,8 @@ function App() {
 
     const bFun = (x: number, r: number, n: number, i: number) => {
         return (
-            (mu0 * i * n * r * r)
-            / (2 * Math.pow((r * r + x * x), 1.5))
+            (mu0 * n * i) / (r * 2) *
+            ((Math.pow((1 + (Math.pow(x / r - 0.5, 2))), -3/2)) + (Math.pow((1 + (Math.pow(x / r + 0.5, 2))), -3/2)))
         );
     }
 
